@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türk Edebiyatı Yazarları</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            background-color: #f7f7f7;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .author-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .author-info {
+            width: 350px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px 10px 20px; 
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer; 
+        }
+        .author-info:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .author-img {
+            width: 300px;
+            height: 400px;
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            margin-top: 10px;
+            font-size: 1.4em;
+        }
+        p {
+            color: #707070;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+        .modal-left {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .modal-right {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .modal-img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Türk Edebiyatı Yazarları</h1>
+    
+    <div class="author-container">
+        <div class="author-info" onclick="window.location.href='yazar1.html'">
+            <img src="Halide_adivar.jpg" alt="Halide Edib Adıvar" class="author-img">
+            <h2>Halide Edib Adıvar</h2>
+            <p>
+                Türk yazarı ve akademisyen. İstanbul Üniversitesi'nde edebiyat profesörü. Memleket Hikayeleri ve Gurbet Hikayeleri gibi eserleriyle tanınır.
+            </p>
+            <p class="kitaplar">Ateşten Gömlek<br>Sinekli Bakkal</p>
+        </div>
+
+        <div class="author-info" onclick="window.location.href='yazar2.html'">
+            <img src="seyfettin5.jpg" alt="Ömer Seyfettin" class="author-img">
+            <h2>Ömer Seyfettin</h2>
+            <p>
+                Türk yazarı, öykü ve roman yazarı. Olay hikayesi türünde eserler vermiştir. Kısa hikayeciliğinin Türk edebiyatında önemli isimlerindendir.
+            </p>
+            <p class="kitaplar">Kaşağı<br>Efruz Bey</p>
+        </div>
+
+        <div class="author-info" onclick="window.location.href='yazar3.html'">
+            <img src="Sabahattin_ali.jpg" alt="Sabahattin Ali" class="author-img">
+            <h2>Sabahattin Ali</h2>
+            <p>
+                Türk yazarı, öğretmen ve gazeteci. Roman, öykü, şiir ve tiyatro türlerinde eserler vermiştir. Kuyucaklı Yusuf, İçimizdeki Şeytan, Değirmen gibi eserleriyle tanınır.
+            </p>
+            <p class="kitaplar">Kürk Mantolu Madonna<br>İçimizdeki Şeytan</p>
+        </div>
+
+        <div class="author-info" onclick="window.location.href='yazar4.html'">
+            <img src="Namik-Kemal.jpg" alt="Namık Kemal" class="author-img">
+            <h2>Namık Kemal</h2>
+            <p>
+                Türk şair, yazar ve siyasetçi. Tanzimat dönemi edebiyatının önde gelen isimlerindendir. İntibah ve Cezmi gibi eserleriyle bilinir.
+            </p>
+            <p class="kitaplar">İntibah<br>Cezmi</p>
+        </div>
+
+        <div class="author-info" onclick="window.location.href='yazar5.html'">
+            <img src="saitfaik.jpg" alt="Sait Faik Abasıyanık" class="author-img">
+            <h2>Sait Faik Abasıyanık</h2>
+            <p>
+                Türk öykü yazarı. Sait Faik Hikayeleri adlı eseriyle tanınır. Doğa ve insan ilişkisini işlediği eserleriyle edebiyat dünyasında etkili olmuştur.
+            </p>
+            <p class="kitaplar">Semaver<br>Lüzumsuz Adam</p>
+        </div>
+
+        <div class="author-info" onclick="window.location.href='yazar6.html'">
+            <img src="mehmetakif.jpeg" alt="Mehmet Akif Ersoy" class="author-img">
+            <h2>Mehmet Akif Ersoy</h2>
+            <p>
+                Türk şair, yazar, akademisyen ve milli mücadele kahramanı. "İstiklal Marşı"nın yazarı olarak tanınır.
+            </p>
+            <p class="kitaplar">Safahat<br>İstiklal Marşı</p>
+        </div>
+
+        <div class="author-info" onclick="window.location.href='yazar7.html'">
+            <img src="peyamisafa.jpg" alt="Peyami Safa" class="author-img">
+            <h2>Peyami Safa</h2>
+            <p>
+                Türk yazarı, romancı ve gazeteci. Dokuzuncu Hariciye Koğuşu, Yalnızız gibi eserleriyle tanınır.
+            </p>
+            <p class="kitaplar">Dokuzuncu Hariciye Koğuşu<br>Yalnızız</p>
+        </div>
+
+        <div class="author-info" onclick="window.location.href='yazar8.html'">
+            <img src="resatnurigultekin.jpg" alt="Reşat Nuri Güntekin" class="author-img">
+            <h2>Reşat Nuri Güntekin</h2>
+            <p>
+                Türk romancı ve oyun yazarı. Çalıkuşu, Yeşil Gece gibi eserleriyle tanınır.
+            </p>
+            <p class="kitaplar">Çalıkuşu<br>Yeşil Gece</p>
+        </div>
+
+        <div class="author-info" onclick="window.location.href='yazar9.html'">
+            <img src="orhankemal.jpg" alt="Orhan Kemal" class="author-img">
+            <h2>Orhan Kemal</h2>
+            <p>
+                Türk romancı. Murtaza, Ekmek Kavgası Üzerinde gibi eserleriyle tanınır.
+            </p>
+            <p class="kitaplar">Murtaza<br>Ekmek Kavgası</p>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-left">
+                <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                <img id="modalImg" class="modal-img">
+            </div>
+            <div class="modal-right">
+                <div id="modalText"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
